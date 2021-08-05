@@ -8,6 +8,10 @@
         <meta name="theme-color" content="#00399e">
         <title>eZoom Frontend Challenge</title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&family=Roboto:wght@700&display=swap" rel="stylesheet"> 
+
         <link rel="stylesheet" href="site.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <meta name="mobile-web-app-capable" content="yes">
@@ -17,6 +21,8 @@
     
         <header>
 
+            <div class='container'>
+
             <h1>SiteDemo</h1>
 
             <nav>
@@ -25,10 +31,12 @@
                 <a href="#">Preços</a>
                 <a href="#">Desenvolvedores</a>
 
-                <form method="post">
-                    <input type="text" />
-                    <button></button>
-                </form>
+                <span spacer></span>
+
+                <a href="#">
+                    <label class='only-mobile'>Buscar&nbsp;</label>
+                    <img src="/img/btn-search.png" />
+                </a>
 
                 <a href="#">Ajuda</a>
                 <a href="#">Contato</a>
@@ -36,13 +44,15 @@
 
             </nav>
 
+            </div>
+
         </header>
 
 
 
         <div id="banners">
 
-            <div id="banner1" class="banner">
+            <div id="banner1" class="banner" style="background-image: url(/img/banner1.jpg);">
                 
                 <h1>Recrie este Banner</h1>
                 
@@ -63,39 +73,53 @@
 
         </div>
 
-        <div id="logos">
+        <section id="logos">
 
-            Logos aqui
+            <div class='container'>
 
-        </div>
+                Logos aqui
 
-        <div id="cards">
+            </div>
 
-            Cards Aqui
+        </section>
 
-        </div>
+        <section id="cards">
+
+            <div class='container'>
+
+                Cards Aqui
+
+            </div>
+
+        </section>
 
         
-        <section>
+        <section id="atendimento" class="😎">
 
-            <h2>Atendimento ao Cliente</h2>
+            <div class='container'>
 
-            <p>
-                Precisando entrar em contato, utilize nossos canais de atendimento
-                ou consulte a documentação para mais informações
-            </p>
+                <h2>Atendimento ao Cliente</h2>
 
-            <div class="btn-group">
+                <p>
+                    Precisando entrar em contato, utilize nossos canais de atendimento
+                    ou consulte a documentação para mais informações
+                </p>
 
-                <a href="#" class="btn-cta btn-primary">Envie um Ticket</a>
-                <a href="#" class="btn-cta btn-secondary">Documentação</a>
+                <div class="btn-group">
+
+                    <a href="#" class="btn-cta btn-primary">Envie um Ticket</a>
+                    <a href="#" class="btn-cta btn-secondary">Documentação</a>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <section>
+        <section id="newsletter" class="🌙">
+
+            <div class='container'>
 
             <h2>Newsletter</h2>
 
@@ -105,29 +129,34 @@
 
                 <input type="email" placeholder="Seu email" />
 
-                <button>Salvar</button>
+                <button class='btn-cta'>Salvar</button>
 
             </form>
+
+            </div>
 
         </section>
 
         <footer>
 
-            <h1>SiteDemo</h1>
+            <div class='container'>
 
-            <nav>
+                <h1>SiteDemo</h1>
 
-                <a href="#">Sobre</a>
-                <a href="#">Preços</a>
-                <a href="#">Desenvolvedores</a>
-                <a href="#">Ajuda</a>
-                <a href="#">Contato</a>
-                
-                <a>+80 1234-56789</a>
+                <nav>
 
-                <a>ola@sitedemo.com.br</a>
+                    <a href="#">Sobre</a>
+                    <a href="#">Preços</a>
+                    <a href="#">Desenvolvedores</a>
+                    <a href="#">Ajuda</a>
+                    <a href="#">Contato</a>
+                    
+                    <a class='phone'>+80 1234-56789</a>
+                    <a class='email'>ola@sitedemo.com.br</a>
 
-            </nav>
+                </nav>
+
+            </div>
 
         </footer>
 
