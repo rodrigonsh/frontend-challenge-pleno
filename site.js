@@ -38,5 +38,36 @@ document.addEventListener("DOMContentLoaded", function()
         }
     });
 
+    fetch('http://localhost:3000/services')
+    .then(response => response.json())
+    .then(function(data)
+    {
+
+        $services = document.querySelector("#services .container")
+        $services.innerHTML = ""
+
+        for( var i=0; i < data.length; i++ )
+        {
+
+            $card = document.createElement("card")
+
+            $img = document.createElement("img")
+            $img.src = "/img/"+data[i].image
+
+            $title = document.createElement("h3")
+            $title.textContent = data[i].title 
+
+            $descr = document.createElement("p")
+            $descr.textContent = data[i].description 
+
+            $card.appendChild($img)
+            $card.appendChild($title)
+            $card.appendChild($descr)
+
+            $services.appendChild($card)
+
+        }
+    });
+
 
 })
