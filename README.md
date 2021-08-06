@@ -17,6 +17,10 @@ Este repositório contem o resultado do Frontend Challenge Pleno da ezoom
     Acesse:
     localhost:5000
 
+    Também tem uma versão online para visualização
+    
+    http://147.182.197.163/frontend-challenge-pleno/
+
 
 # Frontend Challenge Pleno
 
