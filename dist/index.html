@@ -16,6 +16,12 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <meta name="mobile-web-app-capable" content="yes">
 
+        <!-- Link Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+
     </head>
     <body>
     
@@ -52,29 +58,71 @@
 
 
 
-        <div id="banners">
+        <div id="banners" class="swiper-container">
 
-            <div id="banner1" class="banner" style="background-image: url(/img/banner1.jpg);">
-                
-                <h1>Recrie este Banner</h1>
-                
-                <p>
-                    Além deste banner inicial, desenvolva esta área com possibilidade
-                    de mais banners, com outras imagens e vídeo ao fundo também. Utilize
-                    toda sua criatividade para dar vida a este site 
-                </p>
+            <div class='swiper-wrapper'>
 
-                <div class="btn-group">
 
-                    <a href="#" class="btn-cta btn-primary">Sobre o SiteDemo</a>
-                    <a href="#" class="btn-cta btn-secondary">Começar</a>
+                <div id="banner2" class="banner video swiper-slide">
+                    
+                    <video autoplay loop muted src="video.mp4"></video>
+
+                    <div class="over">
+
+                        <img style="margin-bottom: 32px" src="img/nishino.png" id="nishino" />
+
+                        <button class="btn-cta">
+                            <img src="img/ongaku.png" />
+                            Ouvir a Música
+                        </button>
+
+                    </div>
 
                 </div>
 
+                <div id="banner1" class="banner swiper-slide" style="background-image: url(/img/banner1.jpg);">
+                    
+                    <h1>Este banner foi recriado</h1>
+                    
+                    <p>
+                        Que delícia esse template hein 😉
+                    </p>
+
+                    <div class="btn-group">
+
+                        <a href="#" class="btn-cta btn-primary">Sobre o SiteDemo</a>
+                        <a href="#" class="btn-cta btn-secondary">Começar</a>
+
+                    </div>
+
+                </div>
+
+                
+
+                <div id="banner2" class="banner swiper-slide" style="background-image: url(/img/banner3.webp);">
+                    
+                    <h1>Ahhh que bom</h1>
+                    
+                    <p>
+                        Agora posso consertar o chuveiro :D
+                    </p>
+
+                    <div class="btn-group">
+
+                        <a href="#" class="btn-cta btn-primary">Sobre o SiteDemo</a>
+                        <a href="#" class="btn-cta btn-secondary">Começar</a>
+
+                    </div>
+
+                </div>
+            
             </div>
+
+            
 
         </div>
 
+        
         <section id="clients">
 
             <div class='container'>
@@ -84,6 +132,7 @@
             </div>
 
         </section>
+
 
         <section id="services">
 
@@ -162,7 +211,7 @@
 
         </footer>
 
-        <script type="text/javascript" src="site.js"></script>
+        <script type="text/javascript" src="main.js"></script>
 
     </body>
 

@@ -1,12 +1,28 @@
+// import Swiper JS
+import Swiper from 'swiper';
+import SwiperCore, { Autoplay, Navigation } from 'swiper/core';
+
+SwiperCore.use([Autoplay, Navigation]);
+
+const swiper = new Swiper('#banners', {
+    loop: true,
+    //autoplay: { delay: 5000 }
+});
+
 const $hamburguer = document.getElementById("hamburguer");
-const $nav = document.getElementById("main-nav");
+const $header = document.querySelector("header");
 
 $hamburguer.addEventListener('click', function()
 {
+    $header.classList.toggle("show")
+})
 
-    console.log("e aee ")
-    $nav.classList.toggle("show")
-    
+const $ongaku = document.querySelector(".video button")
+$ongaku.addEventListener('click', function()
+{
+    let video = document.querySelector(".video video")
+    video.muted = false;
+    video.play()
 })
 
 document.addEventListener("DOMContentLoaded", function()

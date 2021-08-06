@@ -25,6 +25,7 @@ header
     left: 0px;
     right: 0px;
     padding: 8px;
+    z-index: 2;
 }
 
 header .container
@@ -73,9 +74,14 @@ header nav form input
 }
 
 
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+    color: gray;
+  }
+  
 
-
-.banner
+.swiper-slide
 {
     box-sizing: border-box;
     padding-top: 75px;
@@ -88,7 +94,34 @@ header nav form input
     background-size: cover;
     background-position: bottom center;
     color: white;
+    position: relative;
 }
+
+.swiper-slide.video{ padding-top: 0px; }
+
+.video video
+{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.video .over
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.video .over button{ display: flex; align-items: center; }
+.video .over button img{ margin-right: 8px; }
 
 .banner p
 {
@@ -331,8 +364,9 @@ a.phone{ border-right: 1px solid black; }
 
     header
     {
-        background: #003659;;
+        background-color: #00365900;
         position: fixed;
+        transition: background-color 0.3s ease-in-out,
     }
 
     header .container
@@ -355,7 +389,8 @@ a.phone{ border-right: 1px solid black; }
         opacity: 0;
     }
 
-    header nav.show
+    header.show{ backround-color: #003659ff; }
+    header.show nav
     {
         height: 100vh;
         margin-top: 32px;
@@ -456,8 +491,9 @@ a.phone{ border-right: 1px solid black; }
 
     footer h1 { margin: 16px 0px; }
 
-    footer nav { flex-wrap: wrap; }
+    footer nav { flex-wrap: wrap; justify-content: center;}
 
     footer nav a{ padding: 8px; }
 
 }
+
