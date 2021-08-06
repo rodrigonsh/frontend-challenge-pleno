@@ -1,3 +1,8 @@
+html
+{
+    --swiper-navigation-color: white;
+}
+
 body
 {
     font-family: 'Raleway', sans-serif;
@@ -43,7 +48,7 @@ header h1
     top: -3px;
     flex-shrink: 0;
     text-indent: -1000px;
-    background: url( /img/logo-sitedemo-white.png );
+    background: url( img/logo-sitedemo-white.png );
 }
 
 header nav
@@ -250,7 +255,7 @@ section p{ margin: 0px 0px 32px; }
 
 section.😎
 {
-    background-image: url(/img/desktop.png);
+    background-image: url(img/desktop.png);
     background-position: bottom right;
     background-repeat: no-repeat;
     min-height: 342px;
@@ -317,7 +322,7 @@ footer h1
     top: -1px;
     margin-right: 76px;
     text-indent: -1000px;
-    background: url( /img/logo-sitedemo-color.png );
+    background: url( img/logo-sitedemo-color.png );
 }
 
 footer nav

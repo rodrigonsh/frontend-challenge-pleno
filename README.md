@@ -10,11 +10,9 @@ Este repositório contem o resultado do Frontend Challenge Pleno da ezoom
     cd frontend-challenge-pleno
 
     npm install -g serve
-    npm install -g json-server
-
+    
     serve dist
-    json-server --no-cors dist/db.json 
-
+    
     Acesse:
     localhost:5000
 
@@ -22,6 +20,10 @@ Este repositório contem o resultado do Frontend Challenge Pleno da ezoom
     
     http://147.182.197.163/frontend-challenge-pleno/
 
+
+## Known Isses
+
+- Quando o swiper retorna ao vídeo inicial, o vídeo para de reproduzir visualmente, porém a musica continua tocando
 
 # Frontend Challenge Pleno
 

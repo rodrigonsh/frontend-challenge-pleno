@@ -6,7 +6,7 @@ SwiperCore.use([Autoplay, Navigation]);
 
 const swiper = new Swiper('#banners', {
     loop: true,
-    //autoplay: { delay: 5000 }
+    autoplay: { delay: 5000 }
 });
 
 const $hamburguer = document.getElementById("hamburguer");
@@ -28,7 +28,7 @@ $ongaku.addEventListener('click', function()
 document.addEventListener("DOMContentLoaded", function()
 {
 
-    fetch('http://localhost:3000/clients')
+    fetch('db.json')
     .then(response => response.json())
     .then(function(data)
     {
@@ -36,45 +36,43 @@ document.addEventListener("DOMContentLoaded", function()
         let $clientes = document.querySelector("#clients .container")
         $clientes.innerHTML = ""
 
-        for( var i=0; i < data.length; i++ )
+        let $services = document.querySelector("#services .container")
+        $services.innerHTML = ""
+
+        let cli = data.clients
+        let srv = data.services
+
+        for( var i=0; i < cli.length; i++ )
         {
 
             let $link = document.createElement("a")
-            $link.href = data[i].link
-            $link.title = data[i].title
+            $link.href = cli[i].link
+            $link.title = cli[i].title
             $link.target = "_blank"
 
             let $img = document.createElement("img")
-            $img.src = "/img/"+data[i].image
+            $img.src = "img/"+cli[i].image
 
             $link.appendChild($img)
 
             $clientes.appendChild($link)
 
         }
-    });
 
-    fetch('http://localhost:3000/services')
-    .then(response => response.json())
-    .then(function(data)
-    {
 
-        let $services = document.querySelector("#services .container")
-        $services.innerHTML = ""
-
-        for( var i=0; i < data.length; i++ )
+        for( var i=0; i < srv.length; i++ )
         {
 
             let $card = document.createElement("card")
 
             let $img = document.createElement("img")
-            $img.src = "/img/"+data[i].image
+            $img.src = "img/"+srv[i].image
 
             let $title = document.createElement("h3")
-            $title.textContent = data[i].title 
+            $title.textContent = srv[i].title 
 
             let $descr = document.createElement("p")
-            $descr.textContent = data[i].description 
+            $descr.textContent = srv[i].description 
 
             $card.appendChild($img)
             $card.appendChild($title)
@@ -83,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function()
             $services.appendChild($card)
 
         }
+
     });
 
 
