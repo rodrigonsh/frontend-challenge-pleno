@@ -1,4 +1,22 @@
-<p align="center"><a href="https://ezoom.com.br" target="_blank"><img src="https://www.ezoom.com.br/application/modules/comum/assets/img/logo-ezoom.png" width="400"></a></p>
+# Rodrigo Nishino
+## FullStack Developer
+
+Este repositório contem o resultado do Frontend Challenge Pleno da ezoom
+
+## Como colar pra funcionar
+    
+    git clone https://github.com/rodrigonsh/frontend-challenge-pleno.git
+
+    cd frontend-challenge-pleno
+
+    npm install -g serve
+    npm install -g json-server
+
+    json-server --no-cors dist/db.json 
+
+    Acesse:
+    localhost:5000
+
 
 # Frontend Challenge Pleno
 

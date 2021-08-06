@@ -33,18 +33,18 @@ document.addEventListener("DOMContentLoaded", function()
     .then(function(data)
     {
 
-        $clientes = document.querySelector("#clients .container")
+        let $clientes = document.querySelector("#clients .container")
         $clientes.innerHTML = ""
 
         for( var i=0; i < data.length; i++ )
         {
 
-            $link = document.createElement("a")
+            let $link = document.createElement("a")
             $link.href = data[i].link
             $link.title = data[i].title
             $link.target = "_blank"
 
-            $img = document.createElement("img")
+            let $img = document.createElement("img")
             $img.src = "/img/"+data[i].image
 
             $link.appendChild($img)
@@ -59,21 +59,21 @@ document.addEventListener("DOMContentLoaded", function()
     .then(function(data)
     {
 
-        $services = document.querySelector("#services .container")
+        let $services = document.querySelector("#services .container")
         $services.innerHTML = ""
 
         for( var i=0; i < data.length; i++ )
         {
 
-            $card = document.createElement("card")
+            let $card = document.createElement("card")
 
-            $img = document.createElement("img")
+            let $img = document.createElement("img")
             $img.src = "/img/"+data[i].image
 
-            $title = document.createElement("h3")
+            let $title = document.createElement("h3")
             $title.textContent = data[i].title 
 
-            $descr = document.createElement("p")
+            let $descr = document.createElement("p")
             $descr.textContent = data[i].description 
 
             $card.appendChild($img)

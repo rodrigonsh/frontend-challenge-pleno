@@ -389,7 +389,7 @@ a.phone{ border-right: 1px solid black; }
         opacity: 0;
     }
 
-    header.show{ backround-color: #003659ff; }
+    header.show{ background-color: #003659ff; transition: background-color 0.3s ease-in-out, }
     header.show nav
     {
         height: 100vh;
