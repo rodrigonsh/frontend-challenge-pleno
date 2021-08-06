@@ -147,6 +147,28 @@ section .container
 section h2{ margin-bottom: 32px; }
 section p{ margin: 0px 0px 32px; }
 
+
+#clients{ padding: 4px 0px 0px;  }
+#clients .container
+{
+    flex-direction: row;
+}
+#clients .container a{ flex: 1; text-align: center; }
+#clients .container img
+{
+    height: 48px;  
+    transition: filter 0.2s ease-in-out, opacity 0.2s;
+    opacity: 0.6;
+    filter: saturate(0);
+}
+
+#clients .container a:hover img
+{
+    opacity: 1;
+    filter: saturate(1);
+}
+
+
 section.😎
 {
     background-image: url(/img/desktop.png);
@@ -264,7 +286,7 @@ a.phone{ border-right: 1px solid black; }
     header
     {
         background: #003659;;
-        position: initial;
+        position: fixed;
     }
 
     header .container
@@ -335,6 +357,13 @@ a.phone{ border-right: 1px solid black; }
         text-align: center;
     }
 
+    #clients .container { flex-direction: column; }
+    #clients .container img
+    {
+        opacity: 1;
+        filter: saturate(1);
+        margin: 24px;
+    }
 
     section.😎
     {
