@@ -12,6 +12,7 @@ Este repositório contem o resultado do Frontend Challenge Pleno da ezoom
     npm install -g serve
     npm install -g json-server
 
+    serve dist
     json-server --no-cors dist/db.json 
 
     Acesse:
