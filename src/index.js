@@ -6,7 +6,11 @@ SwiperCore.use([Autoplay, Navigation]);
 
 const swiper = new Swiper('#banners', {
     loop: true,
-    autoplay: { delay: 5000 }
+    autoplay: { delay: 5000 },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      }
 });
 
 const $hamburguer = document.getElementById("hamburguer");
